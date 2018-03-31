@@ -7,13 +7,15 @@ import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 
 const App = StackNavigator({
+  Login:      { screen: LoginScreen },
+  Signup:     { screen: SignupScreen },
   Home:       { screen: MemoListScreen },
   MemoDetail: { screen: MemoDetailScreen },
   MemoEdit:   { screen: MemoEditScreen },
-  Login:      { screen: LoginScreen },
-  Signup:     { screen: SignupScreen },
 }, {
   navigationOptions: {
+    headerTintColor: '#fff',
+    headerBackTitle: null,
     headerTitle: 'Memot',
     headerStyle: {
       backgroundColor: '#265366',
