@@ -10,17 +10,17 @@ class MemoCreateScreen extends React.Component {
   }
 
   handlePress() {
-    const { params } = this.props.navigation.state;
     const db = firebase.firestore();
-    db.collection(`suers/${params.currentUser.uid}/memos`).add({
+    const { currentUser } = firebase.auth();
+    db.collection(`users/${currentUser.uid}/memos`).add({
       body: this.state.body,
       createdOn: new Date(),
     })
       .then((docRef) => {
-        console.log (docRef.id);
+        console.log(docRef.id);
       })
       .catch((error) => {
-        console.log (error);
+        console.log(error);
       });
   }
 
