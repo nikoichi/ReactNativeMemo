@@ -3,10 +3,14 @@ import firebase from 'firebase';
 
 import MemoListScreen from './src/screens/MemoListScreen';
 import MemoDetailScreen from './src/screens/MemoDetailScreen';
+import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import MemoEditScreen from './src/screens/MemoEditScreen';
 import LoginScreen from './src/screens/LoginScreen';
 import SignupScreen from './src/screens/SignupScreen';
 import ENV from './env.json';
+
+// eslint-disable-next-line
+require("firebase/firestore");
 
 const config = {
   apiKey:            ENV.FIREBASE_API_KEY,
@@ -24,6 +28,7 @@ const App = StackNavigator({
   Home:       { screen: MemoListScreen },
   MemoDetail: { screen: MemoDetailScreen },
   MemoEdit:   { screen: MemoEditScreen },
+  MemoCreate: { screen: MemoCreateScreen },
 }, {
   navigationOptions: {
     headerTintColor: '#fff',
