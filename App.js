@@ -34,7 +34,7 @@ const App = StackNavigator({
   navigationOptions: {
     headerTintColor: '#fff',
     headerBackTitle: null,
-    headerTitle: 'Memot',
+    headerTitle: 'Memott',
     headerStyle: {
       shadowColor: '#000',
       shadowOffset: { width: 0, height: 2 },
